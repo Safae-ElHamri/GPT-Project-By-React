@@ -13,6 +13,15 @@
     margin-right: 5rem;
 }
 
+.gradient__text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+
 .gpt3__header-content h1 {
     font-family: var(--font-family);
     font-weight: 800;
