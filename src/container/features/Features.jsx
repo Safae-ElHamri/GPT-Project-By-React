@@ -3,15 +3,19 @@ import './features.css';
 
 const Features = ({ title, text }) => {
   return (
-    <div className='gpt3__features'>
-      <div className='gpt3__features-heading'>
+    <div className='gpt3__features-container__feature'>
+      
+      <div className='gpt3__features-container__feature-title'>
+        <div></div>
         <h1>{title}</h1>
       </div>
-      <div className='gpt3__features-container'>
-        {text}
+
+      <div className='gpt3__features-container_feature-text'>
+        <p>{text}</p>
       </div>
+
     </div>
   )
 }
 
-export default Features
+export default Features;
