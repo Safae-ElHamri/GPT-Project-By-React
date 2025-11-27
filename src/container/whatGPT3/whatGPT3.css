@@ -31,8 +31,25 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.gpt3__whatgpt3-feature {
+.gpt3__whatgpt3-features {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.gpt3__whatgpt3-features__title {
+    color: white;
+    flex: none;
+    text-align: left; /* العنوان يسار */
+}
+
+.gpt3__whatgpt3-features__text {
+    flex-direction: column;
+    color: white;
+    flex: 1;
+    text-align: left; /* النص يمين */
 }
 
 /* Customizing feature component as per needs */

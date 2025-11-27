@@ -9,7 +9,7 @@
 .gpt3__navbar-links {
     flex: 1;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -24,7 +24,9 @@
 
 .gpt3__navbar-links_container {
     display: flex;
+    flex: 1;
     flex-direction: row;
+    justify-content: center;
 }
 
 .gpt3__navbar-sign {

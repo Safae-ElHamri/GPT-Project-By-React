@@ -16,6 +16,7 @@ const Features = ({ title, text }) => {
 
     </div>
   )
+
 }
 
 export default Features;
