@@ -6,11 +6,13 @@ import Footer from './container/footer/Footer';
 import Header from './container/header/Header';
 import Possibility from './container/possibility/Possibility';
 import WhatGPT3 from './container/whatGPT3/WhatGPT3';
+import Thefuture from './container/thefuture/Thefuture';
 
 import Brand from './components/brand/Brand';
 import CTA from './components/cta/CTA';
 import Navbar from './components/navbar/Navbar';
 import './App.css';
+import { Feature } from './container';
 
 const App = () => {
   return (
@@ -22,6 +24,7 @@ const App = () => {
       <Brand />
       <WhatGPT3 />
       <Features />
+      <Thefuture />
       <Possibility />
       <CTA />
       <Blog />
