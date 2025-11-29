@@ -1,8 +1,13 @@
+* {
+    text-indent: 0 !important;
+}
+
 .gpt3__thefuture {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    margin-left: 0;
 }
 
 .gpt3__thefuture-heading {
@@ -18,9 +23,10 @@
 .gpt3__thefuture-heading h1 {
     font-family: var(--font-family);
     font-style: normal;
-    font-weight: 800;
-    font-size: 34px;
+    font-weight: 700;
+    font-size: 30px;
     line-height: 45px;
+    margin-right: 2rem;
 }
 
 .gpt3__thefuture-heading p {
@@ -34,26 +40,50 @@
 }
 
 .gpt3__thefuture-container {
+    color: white;
     flex: 1.5;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    gap: 2rem;
 }
 
-@media screen and (max-width: 990px) {
-    .gpt3__thefuture {
-        flex-direction: column;
-    }
+.gpt3__thefuture-Thefutur {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+}
 
-    .gpt3__thefuture-heading {
-        margin: 0 0 2rem 0;
-    }
+.gpt3__thefuture-Thefutur h3 {
+    font-size: 1rem;
+    margin: 0;
+    min-width: 100px; /* 👈 أهم شيء */
+}
+
+.gpt3__thefuture-Thefutur p {
+    padding-left: 20px;  /* جميع النصوص تبدأ من نفس المكان */
+    text-indent: 0px;  /* يرجع السطر الأول للخلف كي يكون كله في نفس الخط */
+    text-align: left; 
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0 0 40px 0;
 }
 
 @media screen and (max-width: 550px) {
     .gpt3__thefuture-heading h1 {
         font-size: 28px;
         line-height: 38px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .gpt3__thefuture {
+        flex-direction: row;
+    }
+
+    .gpt3__thefuture-heading {
+        margin: 0 0 2rem 0;
     }
 }

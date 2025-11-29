@@ -23,6 +23,13 @@ const thefutureData = [
   }
 ]
 
+const Thefutur = ({ title, text }) => (
+  <div className="gpt3__thefuture-Thefutur">
+    <h3>{title}</h3>
+    <p>{text}</p>
+  </div>
+);
+
 const Thefuture = () => {
   return (
     <div className='gpt3__thefuture section__padding' id='thefuture'>
@@ -32,7 +39,7 @@ const Thefuture = () => {
       </div>
       <div className='gpt3__thefuture-container'>
         {thefutureData.map((item, index) => (
-          <Thefuture title={item.title} text={item.text} key={item.title + index} />
+          <Thefutur title={item.title} text={item.text} key={item.title + index} />
         ))}
       </div>
     </div>

@@ -1,0 +1,150 @@
+/* ---------------------------------------------------------------------- */
+/* الأنماط العامة (General Styles) */
+/* ---------------------------------------------------------------------- */
+
+.gpt3__possibility {
+    /* Layout: استخدام Flexbox لترتيب الصورة والمحتوى جنبًا إلى جنب */
+    display: flex;
+    flex-direction: row;
+    /* محاذاة العناصر عمودياً في المنتصف */
+    align-items: center;
+    /* اللون الأساسي للنص داخل هذا القسم */
+    color: #fff;
+    /* تعيين الخلفية الرئيسية للقسم باللون الأزرق الداكن */
+    background-color: #040c18;
+    /* إضافة تباعد داخلي حول القسم */
+    padding: 4rem 6rem; /* استخدم section__padding إذا كانت معرفة */
+}
+
+/* ---------------------------------------------------------------------- */
+/* قسم الصورة (Image Section) */
+/* ---------------------------------------------------------------------- */
+
+.gpt3__possiility-image {
+    /* شغل نصف المساحة تقريبًا */
+    flex: 1;
+    /* محاذاة الصورة */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.gpt3__possiility-image img {
+    /* اجعل الصورة تتناسب مع حاويتها وتكون قابلة للتجاوب */
+    width: 100%;
+    min-width: 300px; /* للتحكم في أصغر حجم ممكن */
+    height: auto;
+    /* التأثير: الصورة في التصميم رمادية/مزرقّة، لكن نتركها افتراضية هنا */
+    /* يمكنك استخدام filter: grayscale(100%) brightness(80%) sepia(20%) hue-rotate(180deg); لتطبيق تأثير اللون */
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* قسم المحتوى (Content Section) */
+/* ---------------------------------------------------------------------- */
+
+.gpt3__possibility-content {
+    /* شغل نصف المساحة تقريبًا */
+    flex: 1;
+    /* محاذاة المحتوى داخل الحاوية إلى اليسار */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* المحاذاة تبدأ من الأسفل عمودياً */
+    align-items: flex-start;
+}
+
+.gpt3__possibility-content h4 {
+    /* تنسيق نص "Request Early Access..." */
+    font-family: var(--font-family); /* استخدم خطاً مناسباً مثل Arial أو ما تعرفه */
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* لون النص العلوي والسفلي يميل للوردي/البرتقالي */
+    color: #ff8a71;
+    margin-bottom: 0.5rem; /* تباعد بسيط أسفل النص العلوي */
+    cursor: pointer; /* للإشارة إلى أنه زر/رابط */
+}
+
+.gpt3__possibility-content .gradient-text {
+    /* تنسيق العنوان الرئيسي */
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 45px;
+    margin: 1rem 0; /* تباعد حول العنوان */
+    /* التدرج اللوني (يجب أن يكون لديك تعريف لـ .gradient-text) */
+    background: var(--gradient-text); /* افترض أن هذا معرف */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gpt3__possibility-content p {
+    /* تنسيق الفقرة */
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--color-text); /* لون رمادي فاتح للنص */
+    margin-bottom: 2rem;
+}
+
+/* ---------------------------------------------------------------------- */
+/* التجاوبية (Responsiveness) */
+/* ---------------------------------------------------------------------- */
+
+@media screen and (max-width: 950px) {
+    .gpt3__possibility {
+        /* عند الشاشات الأصغر، اجعل الصورة والمحتوى مكدسين عمودياً */
+        flex-direction: column;
+    }
+
+    .gpt3__possiility-image {
+        margin: 1rem 0; /* تباعد بعد الصورة */
+        width: 100%;
+        justify-content: center;
+    }
+
+    .gpt3__possibility-content {
+        /* محاذاة المحتوى في المنتصف في عرض العمود */
+        align-items: center;
+        text-align: center;
+    }
+    
+    .gpt3__possibility-content p {
+        /* لتجنب الفقرة الطويلة جدًا في وضع العمود */
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .gpt3__possibility {
+        /* تقليل الحشو على الهواتف */
+        padding: 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .gpt3__possibility {
+        /* تقليل الحشو على الهواتف الأصغر */
+        padding: 4rem 2rem;
+    }
+
+    .gpt3__possibility-content .gradient-text {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
+
+/* ---------------------------------------------------------------------- */
+/* افتراضات المتغيرات (Variables Assumption) */
+/* ---------------------------------------------------------------------- */
+
+/* ملاحظة: تأكد من أن هذه المتغيرات (Variables) معرفة في ملف CSS عام أو ملف :root لديك */
+/*
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    --color-text: #81afdd;
+}
+*/
